@@ -119,7 +119,7 @@ a:hover {
   border-radius: 1px;
 }
 
-/* --- Hero --- */
+/* --- Hero (cartão de apresentação) --- */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -128,39 +128,156 @@ a:hover {
   position: relative;
   padding: 6rem 1.5rem 4rem;
   overflow: hidden;
+  background: var(--bg) url("img/fundo-hero.png") center / cover no-repeat;
 }
 
-.hero-content {
-  max-width: 640px;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, rgba(15, 20, 25, 0.92) 0%, rgba(15, 20, 25, 0.75) 100%);
+  pointer-events: none;
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 
+.hero-visual {
+  position: relative;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  max-height: 420px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero-glow-1 {
+  width: 200px;
+  height: 200px;
+  background: var(--accent);
+  top: -20%;
+  right: -10%;
+}
+
+.hero-glow-2 {
+  width: 150px;
+  height: 150px;
+  background: #a855f7;
+  bottom: -10%;
+  left: -15%;
+}
+
+.hero-content {
+  max-width: 480px;
+}
+
 .hero-welcome {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.75rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+  color: var(--text);
 }
 
-.hero-title .highlight {
-  color: var(--accent);
-  font-style: italic;
+.hero-role {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .hero-subtitle {
   color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-contact {
+  margin-bottom: 1.5rem;
+}
+
+.hero-email {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-email:hover {
+  color: #4ade80;
+  text-decoration: underline;
+}
+
+.hero-cta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.hero-social a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .btn {
@@ -235,6 +352,42 @@ section {
   font-weight: 500;
 }
 
+.formacao {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.formacao-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.formacao-item {
+  padding: 1rem 1.25rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 360px;
+}
+
+.formacao-instituicao {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.formacao-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 /* --- Projetos (cards) --- */
 .cards {
   display: grid;
@@ -303,6 +456,25 @@ section {
 
 .card-in-progress:hover {
   border-color: var(--accent-progress);
+}
+
+.projetos-andamento-intro {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  max-width: 560px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.card-link:hover {
+  text-decoration: underline;
 }
 
 .cards-andamento {
@@ -382,6 +554,26 @@ section {
 
   .hero {
     padding-top: 5rem;
+  }
+
+  .hero-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .hero-photo-wrap {
+    max-width: 280px;
+    max-height: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-social {
+    justify-content: center;
   }
 
   .cards {
