@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio da May</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#inicio" class="nav-logo">May.</a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <p class="hero-welcome">Bem-vindo ao meu Portfólio</p>
+        <h1 class="hero-title">Olá! Eu sou a <span class="highlight">May</span>.</h1>
+        <p class="hero-subtitle">Profissional de tecnologia com experiência em desenvolvimento de sistemas e aplicações web.</p>
+        <a href="#sobre" class="btn btn-primary">Conheça meu trabalho</a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true"></div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <div class="sobre-content">
+          <p class="sobre-text">
+            Trabalho com <strong>PHP</strong>, <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, 
+            e também possuo conhecimentos em <strong>Python</strong> e <strong>Power BI</strong>.
+          </p>
+          <p class="sobre-text">
+            Estou em constante aprendizado e sempre em busca de novos desafios!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+      <div class="container">
+        <h2 class="section-title">Projetos em Destaque</h2>
+        <div class="cards">
+          <article class="card card-featured">
+            <h3>Sistema de Cadastro e Cálculo de Medidas</h3>
+            <p class="card-tag">Python</p>
+            <p>Aplicação para cálculos corporais, interagindo com o usuário via terminal.</p>
+          </article>
+          <article class="card">
+            <h3>Sistema de Calendário</h3>
+            <p class="card-tag">Web</p>
+            <p>Calendário digital com navegação entre meses.</p>
+          </article>
+          <article class="card">
+            <h3>Calculadora Digital</h3>
+            <p class="card-tag">Web</p>
+            <p>Ferramenta para operações matemáticas básicas.</p>
+          </article>
+          <article class="card">
+            <h3>Simulação de Rede de Computadores</h3>
+            <p class="card-tag">Rede</p>
+            <p>Projeto para entender o funcionamento básico de redes.</p>
+          </article>
+          <article class="card">
+            <h3>Cloud Computing</h3>
+            <p class="card-tag">Curso</p>
+            <p>Curso concluído, com foco em computação em nuvem.</p>
+          </article>
+        </div>
+
+        <h2 class="section-title section-title-secondary">Projetos em Andamento</h2>
+        <div class="cards cards-andamento">
+          <article class="card card-in-progress">
+            <h3>Site de Sistema de Rastreamento LGBT</h3>
+            <p class="card-tag card-tag-progress">Em desenvolvimento</p>
+            <p>Site voltado para a comunidade LGBTQ+, simulando uma empresa exclusiva.</p>
+          </article>
+          <article class="card card-in-progress">
+            <h3>Aplicativo de Pedidos para Lanchonete</h3>
+            <p class="card-tag card-tag-progress">Em breve</p>
+            <p>App de delivery em desenvolvimento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="habilidades">
+      <div class="container">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <ul class="skills-list">
+          <li><span class="skill">PHP</span></li>
+          <li><span class="skill">HTML</span></li>
+          <li><span class="skill">CSS</span></li>
+          <li><span class="skill">JavaScript</span></li>
+          <li><span class="skill">Python</span> <small>(básico)</small></li>
+          <li><span class="skill">Power BI</span> <small>(básico)</small></li>
+          <li><span class="skill">Cloud Computing</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Portfólio da May — em constante aprendizado.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
