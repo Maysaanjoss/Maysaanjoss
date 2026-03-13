@@ -22,11 +22,11 @@ Aplicativo de Pedidos para Lanchonete: Um app de delivery em desenvolvimento. (E
 
 Habilidades Técnicas
 
-PHP, HTML, CSS, JavaScript
+PHP, HTML, CSS, JavaScript, java
 
-Python (básico)
+Python 
 
-Power BI (básico)
+Power BI 
 
 Cloud Computing
 
