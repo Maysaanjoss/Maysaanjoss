@@ -465,9 +465,16 @@ section {
   max-width: 560px;
 }
 
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
 .card-link {
   display: inline-block;
-  margin-top: 0.75rem;
+  margin-top: 0;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--accent);
@@ -475,6 +482,23 @@ section {
 
 .card-link:hover {
   text-decoration: underline;
+}
+
+.card-link-live {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #a855f7;
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 600;
+  margin-top: 0.75rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.card-link-live:hover {
+  background: #9333ea;
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .cards-andamento {
