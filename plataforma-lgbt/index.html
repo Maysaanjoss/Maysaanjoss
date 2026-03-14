@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreamento de Pedidos — Plataforma Inclusiva LGBTQIA+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#inicio" class="nav-logo">Rastreamento LGBT+</a>
+      <div class="nav-right">
+        <label class="toggle-colorido">
+          <input type="checkbox" id="modo-colorido" aria-label="Ativar modo colorido (arco-íris)">
+          <span class="toggle-slider"></span>
+          <span class="toggle-label">Modo colorido</span>
+        </label>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#rastreamento">Rastrear pedido</a></li>
+        <li><a href="#" class="abrir-chat" aria-label="Abrir chat de suporte"><span class="nav-icon" aria-hidden="true">💬</span> Suporte</a></li>
+        <li><a href="#reclamacoes"><span class="nav-icon" aria-hidden="true">📝</span> Reclamações</a></li>
+        <li><a href="#parcerias"><span class="nav-icon" aria-hidden="true">🤝</span> Parcerias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <!-- Bonequinhos / mascotes no fundo (estilo desenho, efeito “wow”) -->
+      <div class="graffiti-bg" aria-hidden="true">
+        <!-- Personagem 1: carinha fofa com laço -->
+        <div class="graffiti-mascote graffiti-mascote-1">
+          <svg class="mascote-svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="face1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:rgba(255,255,255,0.35)"/>
+                <stop offset="100%" style="stop-color:rgba(255,255,255,0.15)"/>
+              </linearGradient>
+              <filter id="soft1" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+              </filter>
+            </defs>
+            <circle cx="70" cy="72" r="38" fill="url(#face1)" stroke="rgba(255,255,255,0.7)" stroke-width="2.5"/>
+            <ellipse cx="55" cy="68" rx="6" ry="7" fill="rgba(255,255,255,0.9)"/>
+            <ellipse cx="85" cy="68" rx="6" ry="7" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="56" cy="67" r="2.5" fill="rgba(100,80,120,0.5)"/>
+            <circle cx="86" cy="67" r="2.5" fill="rgba(100,80,120,0.5)"/>
+            <path d="M52 88 Q70 98 88 88" stroke="rgba(255,255,255,0.85)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <ellipse cx="48" cy="62" rx="5" ry="3" fill="rgba(255,200,220,0.5)"/>
+            <ellipse cx="92" cy="62" rx="5" ry="3" fill="rgba(255,200,220,0.5)"/>
+            <path d="M95 45 L105 38 L108 48 L98 52 Z" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
+            <path d="M45 45 L35 38 L32 48 L42 52 Z" fill="rgba(255,255,255,0.5)" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <!-- Personagem 2: coração com carinha -->
+        <div class="graffiti-mascote graffiti-mascote-2">
+          <svg class="mascote-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="heart2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:rgba(255,255,255,0.4)"/>
+                <stop offset="100%" style="stop-color:rgba(255,200,220,0.25)"/>
+              </linearGradient>
+            </defs>
+            <path d="M60 95 C30 65 20 45 60 25 C100 45 90 65 60 95 Z" fill="url(#heart2)" stroke="rgba(255,255,255,0.65)" stroke-width="2"/>
+            <circle cx="48" cy="52" r="5" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="72" cy="52" r="5" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="49" cy="51" r="2" fill="rgba(120,80,100,0.4)"/>
+            <circle cx="73" cy="51" r="2" fill="rgba(120,80,100,0.4)"/>
+            <path d="M45 65 Q60 74 75 65" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <!-- Personagem 3: estrela/arco-íris estilizado -->
+        <div class="graffiti-mascote graffiti-mascote-3">
+          <svg class="mascote-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="star3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:rgba(255,255,255,0.5)"/>
+                <stop offset="100%" style="stop-color:rgba(255,220,255,0.2)"/>
+              </linearGradient>
+            </defs>
+            <path d="M50 8 L55 38 L50 35 L45 38 Z M50 92 L55 62 L50 65 L45 62 Z M8 50 L38 55 L35 50 L38 45 Z M92 50 L62 55 L65 50 L62 45 Z M22 22 L42 32 L38 28 L32 42 Z M78 78 L58 68 L62 72 L68 58 Z M78 22 L58 32 L62 28 L68 42 Z M22 78 L42 68 L38 72 L32 58 Z" fill="url(#star3)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="12" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+            <circle cx="46" cy="48" r="2.5" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="54" cy="48" r="2.5" fill="rgba(255,255,255,0.9)"/>
+            <path d="M44 54 Q50 58 56 54" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="container hero-content">
+        <p class="hero-tag">Bem-vindo(a)! 🌈</p>
+        <h1 class="hero-title">Rastreamento de Pedidos</h1>
+        <p class="hero-subtitle">Um espaço seguro e acolhedor para acompanhar suas compras. Design inclusivo, pensado para a comunidade LGBTQIA+. Ative o modo colorido e deixe tudo mais alegre!</p>
+        <div class="hero-buttons">
+          <a href="#rastreamento" class="btn btn-primary">Rastrear meu pedido</a>
+          <a href="#" class="btn btn-secondary abrir-chat">Falar com suporte</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="rastreamento" class="section section-rastreio">
+      <div class="container">
+        <h2 class="section-title">Onde está meu pedido?</h2>
+        <p class="section-intro">Digite o código de rastreamento que você recebeu por e-mail ou no app. Acompanhe cada etapa com clareza.</p>
+        <p class="aviso-projeto">⚠️ Este é um projeto de portfólio (demonstração). Não é um sistema real de rastreamento.</p>
+        <div class="rastreio-layout">
+          <div class="icon-entrega-wrap" aria-hidden="true">
+            <div class="icon-entrega">
+              <svg class="icon-entrega-svg icon-mapa-lupa" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Mapa dobrado (amarelo/laranja) -->
+                <path class="mapa-papel" d="M38 52 Q32 46 44 44 L156 38 Q168 42 164 58 L162 148 Q166 160 150 158 L50 164 Q34 162 38 148 Z" fill="#ffed00" stroke="rgba(255,255,255,0.9)" stroke-width="2"/>
+                <path d="M100 44 L100 160 M50 98 L150 95" stroke="#ff8c00" stroke-width="2.5" opacity="0.55"/>
+                <!-- Caminho branco sinuoso -->
+                <path class="caminho" d="M62 132 Q82 122 98 128 Q116 136 132 78 Q142 52 162 58" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Pin menor (origem) -->
+                <path d="M62 137 L62 120 Q62 110 69 110 Q76 110 76 120 L76 137 Q69 144 62 137 Z" fill="#e40303" stroke="white" stroke-width="2"/>
+                <circle cx="69" cy="120" r="4" fill="white"/>
+                <!-- Pin maior (destino) - visível dentro da lupa -->
+                <path d="M162 62 L162 42 Q162 28 172 28 Q182 28 182 42 L182 62 Q172 72 162 62 Z" fill="#e40303" stroke="white" stroke-width="2"/>
+                <circle cx="172" cy="42" r="6" fill="white"/>
+                <!-- Lupa (borda roxa, interior branco) -->
+                <circle cx="172" cy="42" r="30" fill="rgba(255,255,255,0.85)" stroke="#732982" stroke-width="5"/>
+                <circle cx="172" cy="42" r="24" fill="white"/>
+                <!-- Cabo da lupa (roxo + listras laranja/vermelho) -->
+                <path d="M172 72 L172 100" stroke="#732982" stroke-width="8" stroke-linecap="round"/>
+                <rect x="168" y="88" width="8" height="6" rx="1" fill="#ff8c00"/>
+                <rect x="168" y="96" width="8" height="6" rx="1" fill="#e40303"/>
+              </svg>
+              <span class="icon-entrega-label">Rastrear</span>
+            </div>
+          </div>
+          <div class="rastreio-box">
+          <h3 class="rastreio-title">Rastreie seu pedido</h3>
+          <form class="rastreio-form" id="form-rastreio">
+            <input type="text" class="rastreio-input" id="codigo-rastreio" placeholder="Ex: PLT123456789" aria-label="Código de rastreamento" maxlength="20">
+            <button type="submit" class="btn btn-rastrear">Rastrear</button>
+          </form>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-line" aria-hidden="true">
+              <span class="progress-fill" style="width: 100%"></span>
+            </div>
+            <div class="progress-steps">
+              <div class="progress-step progress-step-done">
+                <span class="progress-step-circle progress-step-personagem" aria-hidden="true">
+                  <svg class="timeline-svg mineral-worker" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="crystal1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#a78bfa"/><stop offset="100%" style="stop-color:#6366f1"/></linearGradient>
+                      <linearGradient id="crystal2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#34d399"/><stop offset="100%" style="stop-color:#059669"/></linearGradient>
+                    </defs>
+                    <path d="M40 12 L52 28 L48 52 L32 52 L28 28 Z" fill="url(#crystal1)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                    <path d="M32 52 L40 68 L48 52 L40 58 Z" fill="url(#crystal2)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                    <circle cx="40" cy="26" r="5" fill="rgba(255,255,255,0.9)"/>
+                    <path d="M38 32 L40 36 L42 32" stroke="rgba(255,255,255,0.8)" stroke-width="1" fill="none" stroke-linecap="round"/>
+                    <rect x="34" y="48" width="12" height="8" rx="2" fill="url(#crystal2)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                  </svg>
+                </span>
+                <span class="progress-step-label">Pedido recebido</span>
+              </div>
+              <div class="progress-step progress-step-done">
+                <span class="progress-step-circle progress-step-personagem" aria-hidden="true">
+                  <svg class="timeline-svg mineral-worker mineral-worker-envio" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="crystal1b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f472b6"/><stop offset="100%" style="stop-color:#db2777"/></linearGradient>
+                      <linearGradient id="crystal2b" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fbbf24"/><stop offset="100%" style="stop-color:#f59e0b"/></linearGradient>
+                    </defs>
+                    <path d="M40 14 L50 26 L46 48 L34 48 L30 26 Z" fill="url(#crystal1b)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                    <path d="M34 48 L40 64 L46 48 L40 54 Z" fill="url(#crystal2b)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                    <circle cx="40" cy="26" r="4" fill="rgba(255,255,255,0.9)"/>
+                    <rect x="44" y="38" width="14" height="12" rx="2" fill="url(#crystal2b)" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
+                    <path d="M52 44 L58 44" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span class="progress-step-label">Pedido enviado</span>
+              </div>
+              <div class="progress-step progress-step-done">
+                <span class="progress-step-circle progress-step-personagem" aria-hidden="true">
+                  <svg class="timeline-svg mineral-worker mineral-worker-entrega" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="crystal1c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0ea5e9"/></linearGradient>
+                      <linearGradient id="crystal2c" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+                    </defs>
+                    <path d="M40 16 L48 28 L46 50 L34 50 L32 28 Z" fill="url(#crystal1c)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                    <path d="M34 50 L40 66 L46 50 L40 56 Z" fill="url(#crystal2c)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                    <circle cx="40" cy="28" r="4" fill="rgba(255,255,255,0.9)"/>
+                    <ellipse cx="40" cy="58" rx="8" ry="4" fill="url(#crystal2c)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                    <path d="M28 42 L32 38 M52 42 L48 38" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span class="progress-step-label">Saiu para entrega</span>
+              </div>
+              <div class="progress-step progress-step-done progress-step-current">
+                <span class="progress-step-circle progress-step-personagem" aria-hidden="true">
+                  <svg class="timeline-svg mineral-worker mineral-worker-entregue" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="crystalEnt" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient>
+                      <linearGradient id="crystalBodyEnt" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#4ade80"/><stop offset="100%" style="stop-color:#22c55e"/></linearGradient>
+                    </defs>
+                    <path d="M40 14 L50 26 L46 48 L34 48 L30 26 Z" fill="url(#crystalEnt)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                    <path d="M34 48 L40 64 L46 48 L40 54 Z" fill="url(#crystalBodyEnt)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                    <circle cx="40" cy="26" r="4" fill="rgba(255,255,255,0.9)"/>
+                    <path d="M38 32 L40 36 L42 32" stroke="rgba(255,255,255,0.8)" stroke-width="1" fill="none" stroke-linecap="round"/>
+                    <circle cx="40" cy="52" r="10" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+                    <path d="M36 52 L39 55 L44 50" stroke="rgba(255,255,255,0.95)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="progress-step-label">Entregue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apenas o ícone de chat: suporte e ajuda pelo botão no canto -->
+    <button type="button" class="chat-float-btn" id="chat-float-btn" aria-label="Abrir chat de suporte" title="Abrir chat de suporte">
+      <span class="chat-float-icon">💬</span>
+    </button>
+    <div class="chat-panel" id="chat-panel" aria-hidden="true">
+      <div class="chat-panel-header">
+        <h3>Suporte LGBT+</h3>
+        <button type="button" class="chat-panel-close" id="chat-panel-close" aria-label="Fechar chat">×</button>
+      </div>
+      <div class="chat-box">
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-msg chat-msg-support">
+            <span class="chat-avatar">🌈</span>
+            <div class="chat-bubble">
+              <strong>Suporte LGBT+</strong>
+              <p>Oi! Tudo bem? Sou a equipe de suporte. Como podemos te ajudar hoje? Pode falar à vontade, este é um espaço seguro.</p>
+            </div>
+          </div>
+          <div class="chat-msg chat-msg-user">
+            <div class="chat-bubble">
+              <p>Oi! Queria saber quando meu pedido chega.</p>
+            </div>
+            <span class="chat-avatar">👋</span>
+          </div>
+          <div class="chat-msg chat-msg-support">
+            <span class="chat-avatar">💖</span>
+            <div class="chat-bubble">
+              <strong>Suporte LGBT+</strong>
+              <p>Claro! Se você já tem o código, cola ali em cima na seção "Rastrear pedido" que a gente mostra tudinho. Se precisar de ajuda para achar o código, me fala que eu te guio!</p>
+            </div>
+          </div>
+        </div>
+        <form class="chat-form" id="chat-form">
+          <input type="text" class="chat-input" placeholder="Digite sua mensagem..." aria-label="Sua mensagem" maxlength="300">
+          <button type="submit" class="btn btn-chat">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <section id="reclamacoes" class="section section-reclamacoes">
+      <div class="container">
+        <h2 class="section-title"><span class="section-title-icon" aria-hidden="true">📝</span> Canal de reclamações</h2>
+        <p class="section-intro">Este espaço é dedicado à comunidade LGBTQIA+. Sua opinião e sua reclamação importam. Aqui você é ouvido(a/e) com respeito. Tudo é tratado com seriedade e acolhimento.</p>
+        <div class="reclamacao-box">
+          <form class="reclamacao-form" id="form-reclamacao">
+            <label class="form-label" for="reclamacao-assunto">Assunto</label>
+            <input type="text" id="reclamacao-assunto" class="form-input" placeholder="Ex: atraso na entrega, produto com defeito" required>
+            <label class="form-label" for="reclamacao-texto">Sua reclamação ou sugestão</label>
+            <textarea id="reclamacao-texto" class="form-textarea" rows="5" placeholder="Conte o que aconteceu. Estamos aqui para melhorar e te acolher." required></textarea>
+            <p class="form-note">Seus dados são usados apenas para responder e melhorar nosso atendimento. Este canal é seguro e inclusivo.</p>
+            <button type="submit" class="btn btn-enviar-reclamacao"><span class="btn-icon" aria-hidden="true">✉️</span> Enviar reclamação</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="parcerias" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="section-title-icon" aria-hidden="true">🤝</span> Parcerias</h2>
+        <p class="section-intro">Aberto a parcerias com empresas que queiram fazer parte desse espaço inclusivo.</p>
+        <div class="card card-feature">
+          <div class="card-icon" aria-hidden="true">🤝</div>
+          <h3>Em breve</h3>
+          <p>Se sua empresa quer apoiar a comunidade LGBT+, em breve teremos um canal de parcerias.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2 class="cta-title">Um espaço seguro, acolhedor e colorido</h2>
+        <p class="cta-text">Rastreamento, suporte e reclamações pensados para você. 💜</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-conteudo">
+        <div class="footer-brand">
+          <h2 class="footer-titulo">Plataforma Inclusiva LGBT+</h2>
+          <p class="footer-tagline">Sistema de rastreamento, suporte e reclamações para a comunidade. Espaço seguro e acolhedor.</p>
+        </div>
+        <div class="footer-servicos">
+          <h3 class="footer-servicos-titulo">Serviços</h3>
+          <ul class="footer-servicos-lista">
+            <li><a href="#rastreamento">→ Rastreamento de pedidos</a></li>
+            <li><a href="#" class="abrir-chat">→ Chat de suporte</a></li>
+            <li><a href="#reclamacoes">→ Canal de reclamações</a></li>
+            <li><a href="#parcerias">→ Parcerias</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-copy">© 2026 Plataforma Inclusiva LGBT+. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <p class="modal-brand">Plataforma Inclusiva LGBT+</p>
+      <h2 class="modal-title" id="modal-title">Obrigado!</h2>
+      <p class="modal-text" id="modal-text"></p>
+      <button type="button" class="btn modal-btn" id="modal-ok">OK</button>
+    </div>
+  </div>
+
+  <script src="js/script.js?v=2"></script>
+</body>
+</html>
